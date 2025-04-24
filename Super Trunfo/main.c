@@ -114,5 +114,15 @@ int main() {
     printf("Densidade Populacional: %.2f hab/km² \n", densidade2);
     printf("PIB per Capita: %.2f \n", pibPerCapita2);
 
+    // Resultados das comparações
+    printf("\n---- Comparações ----\n");
+    printf("População: %d\n", populacao1 > populacao2);
+    printf("Área: %d\n", area1 > area2);
+    printf("PIB: %d\n", pib1 > pib2);
+    printf("Pontos Turísticos: %d\n", pontos1 > pontos2);
+    printf("Densidade Populacional (menor vence): %d\n", densidade1 < densidade2);
+    printf("PIB per Capita: %d\n", pibPerCapita1 > pibPerCapita2);
+    printf("Super Poder: %d\n", superpoder1 > superpoder2);
+
     return 0;
 }
