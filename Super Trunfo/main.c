@@ -7,7 +7,7 @@ int main() {
     char estado1;
     char codigo1[4];
     char cidade1[50];
-    int populacao1;
+    unsigned long int populacao1;
     float area1, pib1;
     int pontos1;
     float densidade1, pibPerCapita1;
@@ -16,11 +16,11 @@ int main() {
     char estado2;
     char codigo2[4];
     char cidade2[50];
-    int populacao2;
+    unsigned long int populacao2;
     float area2;
     float pib2;
     int pontos2;
-    float densidade2, pibPerCapita2;
+    float densidade2, pibPerCapita2, superpoder1,superpoder2;
 
     // Entrada da primeira carta
     printf("---- Carta 1 ----\n");
@@ -55,6 +55,7 @@ int main() {
     //calculos
     densidade1 = populacao1 / area1;
     pibPerCapita1 = pib1 / populacao1;
+    superpoder1 = (float)(populacao1+area1+pib1+pontos1+pibPerCapita1-densidade1);
      
     // Entrada da segunda carta
     
@@ -88,7 +89,9 @@ int main() {
     //calculos
     densidade1 = populacao1 / area1;
     pibPerCapita1 = pib1 / populacao1;
+    superpoder2 = (float)(populacao2+area2+pib2+pontos2+pibPerCapita2-densidade2);
 
+    //Saida de resultado
     printf("\n---- Carta 1 ----\n");
     printf("Estado: %c \n", &estado1);
     printf("Código da carta: %s", &codigo1);
