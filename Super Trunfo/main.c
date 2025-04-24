@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 int main() {
 
@@ -29,14 +30,16 @@ int main() {
     printf("Código da Carta (ex: A01): ");
     scanf("%s", codigo1);
 
-    printf("---- Nome da cidade ----\n");
-    printf("Se houver espaço entre o nome da cidade, coloque um ''_'' ao inves de espaço \n");
-    printf("Exemplo: Rio_de_Janeiro \n");
-    printf("Nome da Cidade: \n");
-    scanf("%s", cidade1);
+    getchar();
+
+    printf("Nome da Cidade: ");
+    fgets(cidade1, sizeof(cidade1), stdin);
+    cidade1[strcspn(cidade1, "\n")] = '\0';
 
 
     printf("População: ");
+
+    
     scanf("%d", &populacao1);
 
     printf("Área (em km²): ");
@@ -58,11 +61,11 @@ int main() {
     printf("Código da Carta (ex: A01): ");
     scanf("%s", codigo2);
 
-    printf("---- Nome da cidade ----\n");
-    printf("Se houver espaço entre o nome da cidade, coloque um ''_'' ao inves de espaço \n");
-    printf("Exemplo: Rio_de_Janeiro \n");
-    printf("Nome da Cidade: \n");
-    scanf("%s", cidade2);
+    getchar();
+
+    printf("Nome da Cidade: ");
+    fgets(cidade2, sizeof(cidade2), stdin);
+    cidade2[strcspn(cidade2, "\n")] = '\0';
 
 
     printf("População: ");
