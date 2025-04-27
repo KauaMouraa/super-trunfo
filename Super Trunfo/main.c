@@ -117,28 +117,6 @@ int main() {
     superpoder1 = (float)(populacao1+area1+pib1+pontos1+pibPerCapita1-densidade1);
     superpoder2 = (float)(populacao2+area2+pib2+pontos2+pibPerCapita2-densidade2);
 
-    //Saida de resultado
-    printf("\n---- Carta 1 ----\n");
-    printf("Estado: %c \n", &estado1);
-    printf("Código da carta: %s", &codigo1);
-    printf("Cidade: %s \n", cidade1);
-    printf("População: %d \n", populacao1);
-    printf("Área: %.2f km² \n", area1);
-    printf("PIB: %.2f \n", pib1);
-    printf("Pontos Turísticos: %d \n", pontos1);
-    printf("Densidade Populacional: %.2f hab/km² \n", densidade1);
-    printf("PIB per Capita: %.2f \n", pibPerCapita1);
-
-    printf("\n--- Carta 2 ---\n");
-    printf("Estado: %c \n", estado2);
-    printf("Código: %s \n", codigo2);
-    printf("Cidade: %s \n", cidade2);
-    printf("População: %d \n", populacao2);
-    printf("Área: %.2f km² \n", area2);
-    printf("PIB: %.2f \n", pib2);
-    printf("Pontos Turísticos: %d \n", pontos2);
-    printf("Densidade Populacional: %.2f hab/km² \n", densidade2);
-    printf("PIB per Capita: %.2f \n", pibPerCapita2);
 
     // Resultados das comparações
     printf("\n---- Comparações ----\n");
