@@ -37,10 +37,7 @@ int main() {
     fgets(cidade1, sizeof(cidade1), stdin);
     cidade1[strcspn(cidade1, "\n")] = '\0';
 
-
     printf("População: ");
-
-    
     scanf("%d", &populacao1);
 
     printf("Área (em km²): ");
@@ -117,8 +114,20 @@ int main() {
     superpoder1 = (float)(populacao1+area1+pib1+pontos1+pibPerCapita1-densidade1);
     superpoder2 = (float)(populacao2+area2+pib2+pontos2+pibPerCapita2-densidade2);
 
+    // novo resultado das comparações
 
-    // Resultados das comparações
+    printf("Comparação de Cartas (Atributo: Pib) \n");
+        printf("Carta 1 - %s (%c): %.2f \n", cidade1,estado1,pib1);
+        printf("Carta 2 - %s (%c): %.2f \n", cidade2,estado2,pib2);
+
+    if (pib1 > pib2) {
+        printf("Resultado: Carta 1 (%s) Venceu!", cidade1);
+    }
+    else{
+        printf("Resultado: Carta 2 (%s) Venceu!", cidade2); 
+    }
+
+    /* Resultados das comparações
     printf("\n---- Comparações ----\n");
     printf("População: Carta 1 venceu (%d)\n", populacao1 > populacao2);
     printf("Área: Carta 1 venceu (%d)\n", area1 > area2);
@@ -127,6 +136,7 @@ int main() {
     printf("Densidade Populacional: Carta 2 venceu (%d)\n", densidade1 < densidade2);
     printf("PIB per Capita: Carta 1 venceu (%d)\n", pibPerCapita1 > pibPerCapita2);
     printf("Super Poder: Carta 1 venceu (%d)\n", superpoder1 > superpoder2);
+    */
 
     return 0;
 }
